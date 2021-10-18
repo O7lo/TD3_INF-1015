@@ -11,7 +11,7 @@ class Liste
 public:
 	//TODO: Constructeurs et surcharges d'opérateurs
 	Liste() {}
-	~Liste() { std::cout << "Detrut!" << endl; }
+	~Liste() { std::cout << "Détruit!" << std::endl; }
 
 	Liste& operator[] (const Liste& indice)
 	{
@@ -43,6 +43,14 @@ public:
 	}
 
 	//TODO: Méthode pour trouver une élément selon un critère (lambda).
+	template<typename CritereLambda>
+	T trouver(const CritereLambda& critere) {
+		for (int i : iter::range(nElements_)) {
+			if (critere(elements_[i])) {
+				return elements_[i];
+			}
+		}
+	}
 
 
 private:
