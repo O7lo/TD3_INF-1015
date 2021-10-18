@@ -1,7 +1,10 @@
-﻿  bibliotheque_cours.cpp
-C:\Users\pascal\Desktop\ecole\INF1015\TD2\TD2-inf1015\bibliotheque_cours\bibliotheque_cours.cpp(74,119): warning C4267: 'argument' : conversion de 'size_t' en 'int', perte possible de données
-  verification_allocation.cpp
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: Le répertoire intermédiaire (x64\Debug\) contient des fichiers partagés provenant d'un autre projet (TD2.vcxproj). Cela peut entraîner un comportement de nettoyage et de regénération incorrect.
+  lectureFichierJeux.cpp
+C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\lectureFichierJeux.cpp(31,55): warning C4100: 'listeJeux' : paramètre formel non référencé
+C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\lectureFichierJeux.cpp(37,51): warning C4100: 'lj' : paramètre formel non référencé
+C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\lectureFichierJeux.cpp(40,11): warning C4189: 'anneeNaissance' : variable locale initialisée mais non référencée
+C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\lectureFichierJeux.cpp(51,11): warning C4189: 'anneeSortie' : variable locale initialisée mais non référencée
   main.cpp
   Génération de code en cours...
-     Création de la bibliothèque C:\Users\pascal\Desktop\ecole\INF1015\TD2\TD2-inf1015\x64\Debug\TD2.lib et de l'objet C:\Users\pascal\Desktop\ecole\INF1015\TD2\TD2-inf1015\x64\Debug\TD2.exp
-  ProjetTest.vcxproj -> C:\Users\pascal\Desktop\ecole\INF1015\TD2\TD2-inf1015\x64\Debug\TD2.exe
+lectureFichierJeux.obj : error LNK2019: symbole externe non résolu "public: __cdecl Liste<class Jeu>::Liste<class Jeu>(void)" (??0?$Liste@VJeu@@@@QEAA@XZ) référencé dans la fonction "class Liste<class Jeu> __cdecl creerListeJeux(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> > const &)" (?creerListeJeux@@YA?AV?$Liste@VJeu@@@@AEBV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
+C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\x64\Debug\ProjetTest.exe : fatal error LNK1120: 1 externes non résolus
