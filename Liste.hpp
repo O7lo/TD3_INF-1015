@@ -13,11 +13,11 @@ public:
 	Liste() {}
 	~Liste() { std::cout << "Détruit!" << std::endl; }
 
-	Liste& operator[] (const Liste& indice)
-	{
+	T operator[] (const int indice) const
+	{ 
 		return elements_[indice];
 	}
-
+	
 
 	//TODO: Méthode pour ajouter un élément à la liste
 	void ajouterJeu(T liste, std::unique_ptr<T> element)
@@ -57,5 +57,5 @@ private:
 	unsigned nElements_;
 	unsigned capacite_;
 	//TODO: Attribut contenant les éléments de la liste.
-	std::unique_ptr<T[]> elements_;
+	std::unique_ptr<T[]> elements_;			//ne devrait pas etre un shared_ptr?
 };

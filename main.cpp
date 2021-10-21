@@ -32,4 +32,5 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 	//TODO: S'assurer qu'aucune ligne de code est non couverte.
 	//NOTE: Il n'est pas nécessaire de couvrir les getters/setters simples fournis; il faut tester si vous en ajoutez ou les modifiez.
 	//NOTE: Pour Liste, qui est générique, on demande de couvrir uniquement pour Liste<Jeu>, pas pour tous les types.
+
 }
