@@ -10,6 +10,12 @@ using namespace std;
 
 //TODO: Vos surcharges d'opérateur <<
 
+ostream& operator<< (ostream& o, const Jeu& j) 
+{
+	Liste<Jeu> liste;
+	return liste.afficherSur(o);
+}
+
 int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 {
 	#pragma region "Bibliothèque du cours"
@@ -32,5 +38,8 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 	//TODO: S'assurer qu'aucune ligne de code est non couverte.
 	//NOTE: Il n'est pas nécessaire de couvrir les getters/setters simples fournis; il faut tester si vous en ajoutez ou les modifiez.
 	//NOTE: Pour Liste, qui est générique, on demande de couvrir uniquement pour Liste<Jeu>, pas pour tous les types.
+
+
+	cout << lj[1] << endl;
 
 }

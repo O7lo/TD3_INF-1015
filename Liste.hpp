@@ -10,14 +10,27 @@ class Liste
 {
 public:
 	//TODO: Constructeurs et surcharges d'opérateurs
-	Liste() {}
+	Liste(const unsigned& nElements = 0, const unsigned& capacite = 0) {
+		nElements_ = nElements;
+		capacite_ = capacite;
+
+	}
 	~Liste() { std::cout << "Détruit!" << std::endl; }
 
-	T operator[] (const int indice) const
+	T& operator[] (const int indice) const
 	{ 
 		return elements_[indice];
 	}
 	
+	//methode pour avoir la dimension de la liste
+	std::ostream& afficherSur(std::ostream& leOstream) const 
+	{
+		for (auto i : iter::range(nElements_)) 
+		{
+			leOstream << elements_;
+		}
+		return leOstream;
+	}
 
 	//TODO: Méthode pour ajouter un élément à la liste
 	void ajouterJeu(T liste, std::unique_ptr<T> element)

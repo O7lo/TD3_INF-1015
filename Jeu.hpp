@@ -9,7 +9,7 @@ class Jeu
 {
 public:
 	//TODO: un constructeur par défaut et un constructeur paramétré.
-	Jeu() {}
+	Jeu() = default;
 	Jeu(const std::string& titre =  "", const unsigned& anneeSortie = 0, const std::string& developpeur = "") {
 		titre_ = titre;
 		anneeSortie_ = anneeSortie;
