@@ -22,15 +22,6 @@ public:
 		return elements_[indice];
 	}
 	
-	//methode pour avoir la dimension de la liste
-	std::ostream& afficherSur(std::ostream& leOstream) const 
-	{
-		for (auto i : iter::range(nElements_)) 
-		{
-			leOstream << elements_;
-		}
-		return leOstream;
-	}
 
 	//TODO: Méthode pour ajouter un élément à la liste
 	void ajouterJeu(T liste, std::unique_ptr<T> element)
