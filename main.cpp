@@ -10,10 +10,10 @@ using namespace std;
 
 //TODO: Vos surcharges d'opérateur <<
 
-ostream& operator<< (ostream& o, const Jeu& j) 
+ostream& operator<< (ostream& o, const Liste<Jeu>& f) 
 {
-	Liste<Jeu> liste;
-	return liste.afficherSur(o);
+	
+	return f.afficherSur(o);
 }
 
 int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
@@ -40,6 +40,5 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 	//NOTE: Pour Liste, qui est générique, on demande de couvrir uniquement pour Liste<Jeu>, pas pour tous les types.
 
 
-	cout << lj[1] << endl;
-
+	//cout << lj << endl;
 }

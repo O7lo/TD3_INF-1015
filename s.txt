@@ -1,0 +1,12 @@
+﻿L'opération de génération a démarré...
+1>------ Début de la génération : Projet : TD3, Configuration : Debug x64 ------
+1>lectureFichierJeux.cpp
+1>C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\lectureFichierJeux.cpp(31,55): warning C4100: 'listeJeux' : paramètre formel non référencé
+1>C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\lectureFichierJeux.cpp(37,51): warning C4100: 'lj' : paramètre formel non référencé
+1>C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\lectureFichierJeux.cpp(40,11): warning C4189: 'anneeNaissance' : variable locale initialisée mais non référencée
+1>C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\lectureFichierJeux.cpp(53,11): warning C4189: 'anneeSortie' : variable locale initialisée mais non référencée
+1>main.cpp
+1>Génération de code en cours...
+1>ProjetTest.vcxproj -> C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\x64\Debug\TD3.exe
+1>Génération du projet "ProjetTest.vcxproj" terminée.
+========== Génération : 1 a réussi, 0 a échoué, 0 à jour, 0 a été ignoré ==========

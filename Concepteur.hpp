@@ -4,7 +4,13 @@
 class Concepteur
 {
 public:
-	//TODO: Un constructeur par défaut et un constructeur paramétré.
+	// Un constructeur par défaut et un constructeur paramétré.
+	Concepteur() = default;
+	Concepteur(const string& nom = "", const unsigned& anneeNaissance = 0, const string& pays = "") {
+		setNom(nom);
+		setAnneeNaissance(anneeNaissance);
+		setPays(pays);
+	}
 
 	const std::string& getNom() const     { return nom_; }
 	void setNom(const std::string& nom)   { nom_ = nom; }

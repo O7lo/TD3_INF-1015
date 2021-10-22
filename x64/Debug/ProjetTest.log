@@ -1,7 +1,2 @@
 ﻿  main.cpp
-C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\main.cpp(13,45): warning C4100: 'j' : paramètre formel non référencé
-C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\Liste.hpp(28,13): warning C4189: 'i' : variable locale initialisée mais non référencée
-C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\Liste.hpp(27): message : pendant la compilation de la fonction membre classe modèle 'std::ostream &Liste<Jeu>::afficherSur(std::ostream &) const'
-C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\main.cpp(16): message : voir la référence à l'instanciation de la fonction modèle 'std::ostream &Liste<Jeu>::afficherSur(std::ostream &) const' en cours de compilation
-C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\main.cpp(15): message : voir la référence à l'instanciation classe modèle 'Liste<Jeu>' en cours de compilation
   ProjetTest.vcxproj -> C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\x64\Debug\TD3.exe

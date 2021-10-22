@@ -10,11 +10,8 @@ class Liste
 {
 public:
 	//TODO: Constructeurs et surcharges d'opérateurs
-	Liste(const unsigned& nElements = 0, const unsigned& capacite = 0) {
-		nElements_ = nElements;
-		capacite_ = capacite;
+	Liste() = default;
 
-	}
 	~Liste() { std::cout << "Détruit!" << std::endl; }
 
 	T& operator[] (const int indice) const
@@ -25,15 +22,12 @@ public:
 	//methode pour avoir la dimension de la liste
 	std::ostream& afficherSur(std::ostream& leOstream) const 
 	{
-		for (auto i : iter::range(nElements_)) 
-		{
-			leOstream << elements_;
-		}
+		leOstream << elements_;
 		return leOstream;
 	}
 
-	//TODO: Méthode pour ajouter un élément à la liste
-	void ajouterJeu(T liste, std::unique_ptr<T> element)
+	//: Méthode pour ajouter un élément à la liste
+	void ajouterElement(T liste, std::unique_ptr<T> element)
 	{
 		if (nElements_ == capacite_)
 			changerCapacite(liste,capacite_ * 2);
@@ -43,7 +37,7 @@ public:
 	unsigned size() const         { return nElements_; }
 	unsigned getCapacite() const  { return capacite_; }
 
-	//TODO: Méthode pour changer la capacité de la liste
+	//: Méthode pour changer la capacité de la liste
 	void changerCapacite(T liste, unsigned nouvelleCapacite) {
 		if (nouvelleCapacite > nElements_) {
 			auto nouvelleListe = std::make_unique<T[]>(nouvelleCapacite);
@@ -55,7 +49,7 @@ public:
 		}
 	}
 
-	//TODO: Méthode pour trouver une élément selon un critère (lambda).
+	//: Méthode pour trouver une élément selon un critère (lambda).
 	template<typename CritereLambda>
 	T trouver(const CritereLambda& critere) {
 		for (int i : iter::range(nElements_)) {
@@ -69,6 +63,6 @@ public:
 private:
 	unsigned nElements_;
 	unsigned capacite_;
-	//TODO: Attribut contenant les éléments de la liste.
-	std::unique_ptr<T[]> elements_;			//ne devrait pas etre un shared_ptr?
+	//: Attribut contenant les éléments de la liste.
+	std::unique_ptr<T[]> elements_ = nullptr;			
 };
