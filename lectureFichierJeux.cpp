@@ -31,7 +31,7 @@ string lireString(istream& fichier)
 shared_ptr<Concepteur> chercherConcepteur(Liste<Jeu>& listeJeux, string nom)
 {
 	//TODO: Compléter la fonction (équivalent de trouverDesigner du TD2).
-
+	
 
 	return {};
 }

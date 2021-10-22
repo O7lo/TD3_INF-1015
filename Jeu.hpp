@@ -24,7 +24,8 @@ public:
 	void setDeveloppeur(const std::string& developpeur) { developpeur_ = developpeur; }
 
 	//TODO: Pouvoir accéder à la liste de concepteurs.
-	shared_ptr<Liste<Concepteur>> getConcepteurs(const Liste<Concepteur>& listeConcepteurs) {
+	std::shared_ptr<Liste<Concepteur>> getConcepteurs() {
+
 		return listeConcepteur;
 	}
 	//TODO: Votre méthode pour trouver un concepteur selon un critère donné par une lambda, en utilisant la méthode de Liste.
@@ -35,5 +36,5 @@ private:
 	unsigned anneeSortie_;
 	std::string developpeur_;
 	// Attribut de la liste des concepteurs du jeu
-	shared_ptr<Liste<Concepteur>> listeConcepteur = nullptr;
+	std::shared_ptr<Liste<Concepteur>> listeConcepteur = nullptr;
 };
