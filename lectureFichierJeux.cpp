@@ -41,12 +41,19 @@ shared_ptr<Concepteur> lireConcepteur(Liste<Jeu>& lj, istream& f)
 	string nom              = lireString(f);
 	unsigned anneeNaissance = lireUint16(f);
 	string pays             = lireString(f);
+	Concepteur concepteur(nom,anneeNaissance,pays);
 
 	//TODO: Compléter la fonction (équivalent de lireDesigner du TD2).
-	 
-	
-	//cout << "C: " << nom << endl;  //TODO: Enlever cet affichage temporaire servant à voir que le code fourni lit bien les jeux.
-	return {};
+	shared_ptr<Concepteur> concepteurExistant = chercherConcepteur(lj, nom);
+	if (concepteurExistant!=nullptr) {
+		return concepteurExistant;
+	}
+	else {
+		shared_ptr<Concepteur> nouveauConcepteur = make_shared<Concepteur>(concepteur);
+		
+		cout << "Allocation du concepteur \"" << nouveauConcepteur->getNom() << "\" réussie.\n";
+		return nouveauConcepteur;
+	}
 }
 
 shared_ptr<Jeu> lireJeu(istream& f, Liste<Jeu>& lj)

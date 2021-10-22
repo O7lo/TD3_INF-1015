@@ -23,7 +23,7 @@ public:
 	const std::string& getDeveloppeur() const { return developpeur_; }
 	void setDeveloppeur(const std::string& developpeur) { developpeur_ = developpeur; }
 
-	//TODO: Pouvoir accéder à la liste de concepteurs.
+	// Pouvoir accéder à la liste de concepteurs.
 	std::shared_ptr<Liste<Concepteur>> getConcepteurs() {
 
 		return listeConcepteur;

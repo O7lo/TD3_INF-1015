@@ -6,11 +6,7 @@ class Concepteur
 public:
 	// Un constructeur par défaut et un constructeur paramétré.
 	Concepteur() = default;
-	Concepteur(const std::string& nom, const unsigned& anneeNaissance, const std::string& pays) {
-		nom_ = nom;
-		anneeNaissance_ = anneeNaissance;
-		pays_ = pays;
-	}
+	Concepteur(const std::string& nom, const unsigned& anneeNaissance, const std::string& pays) :nom_(""), anneeNaissance_(0U), pays_("") {};
 
 	const std::string& getNom() const     { return nom_; }
 	void setNom(const std::string& nom)   { nom_ = nom; }
