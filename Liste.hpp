@@ -19,12 +19,6 @@ public:
 		return elements_[indice];
 	}
 	
-	//methode pour avoir la dimension de la liste
-	std::ostream& afficherSur(std::ostream& leOstream) const 
-	{
-		leOstream << elements_;
-		return leOstream;
-	}
 
 	//: Méthode pour ajouter un élément à la liste
 	void ajouterElement(T liste, std::unique_ptr<T> element)

@@ -1,2 +1,7 @@
 ﻿  main.cpp
+<<<<<<< HEAD
   ProjetTest.vcxproj -> C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\x64\Debug\TD3.exe
+=======
+C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\main.cpp(22,54): error C2039: 'getConcepteurs' n'est pas membre de 'Jeu'
+C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\Jeu.hpp(8): message : voir la déclaration de 'Jeu'
+>>>>>>> 968d9a13c88108ccecf44c996b54c894dccc6217

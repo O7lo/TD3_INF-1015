@@ -6,14 +6,33 @@
 #include "lectureFichierJeux.hpp"
 #include <iostream>
 #include <fstream>
+#include <iomanip>
 using namespace std;
 
 //TODO: Vos surcharges d'opérateur <<
 
-ostream& operator<< (ostream& o, const Liste<Jeu>& f) 
+ostream& operator<< (ostream& o, const Liste<Jeu>& listeJeux) 
 {
-	
-	return f.afficherSur(o);
+	string ligne = "\n\033[35m- - - - - - - - - - - - - - - - - - - - \033[0m\n";
+	for (auto i : iter::range(listeJeux.size())) {
+		o << ligne << endl;
+		o << setw(36) << left << listeJeux[i].getTitre();
+		o << "Développeur : " << setw(22) << left << listeJeux[i].getDeveloppeur();
+		o << "    Sorti en " << listeJeux[i].getAnneeSortie();
+		o << "\n\nConcepteurs du jeu:\n\n" << listeJeux[i].getConcepteurs();
+		o << ligne << endl;
+	}
+	return o;
+}
+
+ostream& operator<< (ostream& o, const Liste<Concepteur>& listeConcepteurs)
+{
+	for (auto i : iter::range(listeConcepteurs.size())) {
+		o << setw(26) << left << listeConcepteurs[i].getNom();
+		o << "\tné en : " << listeConcepteurs[i].getAnneeNaissance();
+		o << "\tpays : " << listeConcepteurs[i].getPays() << endl;
+	}
+	return o;
 }
 
 int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
@@ -40,5 +59,6 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 	//NOTE: Pour Liste, qui est générique, on demande de couvrir uniquement pour Liste<Jeu>, pas pour tous les types.
 
 
-	//cout << lj << endl;
+	cout << lj << endl;
+
 }
