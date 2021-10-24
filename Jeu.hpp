@@ -10,10 +10,10 @@ class Jeu
 public:
 	//:un constructeur par défaut et un constructeur paramétré.
 	Jeu() = default;
-	Jeu(const std::string& titre = "", const unsigned& anneeSortie = 0, const std::string& developpeur = "") {
-		setTitre(titre);
-		setAnneeSortie(anneeSortie);
-		setDeveloppeur(developpeur);
+	Jeu(const std::string& titre, const unsigned& anneeSortie, const std::string& developpeur,const Liste<Concepteur>& listeConcepteurs):titre_(titre),anneeSortie_(anneeSortie),developpeur_(developpeur),listeConcepteurs_(listeConcepteurs) {
+		/*titre_=titre;
+		anneeSortie_=anneeSortie;
+		developpeur_=developpeur;*/
 	}
 
 	const std::string& getTitre() const { return titre_; }
@@ -24,8 +24,8 @@ public:
 	void setDeveloppeur(const std::string& developpeur) { developpeur_ = developpeur; }
 
 	// Pouvoir accéder à la liste de concepteurs.
-	std::shared_ptr<Liste<Concepteur>> getConcepteurs() {
-
+	const Liste<Concepteur>& getConcepteurs() const {
+		//Liste<Concepteur>* ptrListe = &listeConcepteurs_;
 		return listeConcepteurs_;
 	}
 	// Votre méthode pour trouver un concepteur selon un critère donné par une lambda, en utilisant la méthode de Liste.
@@ -41,5 +41,5 @@ private:
 	unsigned anneeSortie_;
 	std::string developpeur_;
 	// Attribut de la liste des concepteurs du jeu
-	std::shared_ptr<Liste<Concepteur>> listeConcepteurs_ = nullptr;
+	Liste<Concepteur> listeConcepteurs_;
 };

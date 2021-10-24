@@ -43,7 +43,7 @@ shared_ptr<Concepteur> lireConcepteur(Liste<Jeu>& lj, istream& f)
 	string pays             = lireString(f);
 	Concepteur concepteur(nom,anneeNaissance,pays);
 
-	//TODO: Compléter la fonction (équivalent de lireDesigner du TD2).
+	// Compléter la fonction (équivalent de lireDesigner du TD2).
 	shared_ptr<Concepteur> concepteurExistant = chercherConcepteur(lj, nom);
 	if (concepteurExistant!=nullptr) {
 		return concepteurExistant;
@@ -63,11 +63,14 @@ shared_ptr<Jeu> lireJeu(istream& f, Liste<Jeu>& lj)
 	string developpeur    = lireString(f);
 	unsigned nConcepteurs = lireUint8(f);
 	//TODO: Compléter la fonction (équivalent de lireJeu du TD2).
-	for (unsigned int i = 0; i < nConcepteurs; i++)
-		lireConcepteur(lj, f);
-	
-	//cout << "J: " << titre << endl;  //TODO: Enlever cet affichage temporaire servant à voir que le code fourni lit bien les jeux.
-	return {};
+	Liste<Concepteur> listeConcepteurs;
+	for (unsigned int i = 0; i < nConcepteurs; i++) {
+		listeConcepteurs.ajouterElement(lireConcepteur(lj, f));
+	}
+	Jeu jeu(titre, anneeSortie, developpeur, listeConcepteurs);
+	shared_ptr<Jeu> ptrJeu = make_shared<Jeu>(jeu);
+
+	return ptrJeu;
 }
 
 Liste<Jeu> creerListeJeux(const string& nomFichier)
