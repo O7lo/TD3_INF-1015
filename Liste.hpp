@@ -12,7 +12,7 @@ public:
 	//TODO: Constructeurs et surcharges d'opérateurs
 	Liste() = default;
 
-	~Liste() { std::cout << "Détruit!" << std::endl; }
+	~Liste() {}
 
 	std::shared_ptr<T> operator[] (const int indice) const
 	{ 

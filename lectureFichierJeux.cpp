@@ -69,7 +69,7 @@ shared_ptr<Jeu> lireJeu(istream& f, Liste<Jeu>& lj)
 	}
 	Jeu jeu(titre, anneeSortie, developpeur, listeConcepteurs);
 	shared_ptr<Jeu> ptrJeu = make_shared<Jeu>(jeu);
-
+	cout << "Allocation du jeu \"" << ptrJeu->getTitre() << "\" réussie.\n";
 	return ptrJeu;
 }
 
