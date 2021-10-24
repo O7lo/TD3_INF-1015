@@ -26,9 +26,14 @@ public:
 	// Pouvoir accéder à la liste de concepteurs.
 	std::shared_ptr<Liste<Concepteur>> getConcepteurs() {
 
-		return listeConcepteur;
+		return listeConcepteurs_;
 	}
-	//TODO: Votre méthode pour trouver un concepteur selon un critère donné par une lambda, en utilisant la méthode de Liste.
+	// Votre méthode pour trouver un concepteur selon un critère donné par une lambda, en utilisant la méthode de Liste.
+	
+	template<typename CritereLambda>
+	Concepteur trouverConcepteur(const CritereLambda& critere) {
+		return listeConcepteurs_->trouver(critere);
+	}
 
 
 private:
@@ -36,5 +41,5 @@ private:
 	unsigned anneeSortie_;
 	std::string developpeur_;
 	// Attribut de la liste des concepteurs du jeu
-	std::shared_ptr<Liste<Concepteur>> listeConcepteur = nullptr;
+	std::shared_ptr<Liste<Concepteur>> listeConcepteurs_ = nullptr;
 };

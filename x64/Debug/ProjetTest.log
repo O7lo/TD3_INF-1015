@@ -4,5 +4,10 @@ C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\Concepteur.hpp(9,53): 
 C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\Concepteur.hpp(9,32): warning C4100: 'nom' : paramètre formel non référencé
 C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\lectureFichierJeux.cpp(31,55): warning C4100: 'listeJeux' : paramètre formel non référencé
 C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\lectureFichierJeux.cpp(62,11): warning C4189: 'anneeSortie' : variable locale initialisée mais non référencée
+  main.cpp
+C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\Concepteur.hpp(9,88): warning C4100: 'pays' : paramètre formel non référencé
+C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\Concepteur.hpp(9,53): warning C4100: 'anneeNaissance' : paramètre formel non référencé
+C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\Concepteur.hpp(9,32): warning C4100: 'nom' : paramètre formel non référencé
+  Génération de code en cours...
      Création de la bibliothèque C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\x64\Debug\TD3.lib et de l'objet C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\x64\Debug\TD3.exp
   ProjetTest.vcxproj -> C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\x64\Debug\TD3.exe
