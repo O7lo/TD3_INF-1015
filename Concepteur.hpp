@@ -1,5 +1,7 @@
 #pragma once
 #include <string>
+#include <memory>
+#include <iostream>
 
 class Concepteur
 {
@@ -18,6 +20,11 @@ public:
 	void setAnneeNaissance(int annee)     { anneeNaissance_ = annee; }
 	const std::string& getPays() const    { return pays_; }
 	void setPays(const std::string& pays) { pays_ = pays; }
+	ostream& afficherConcepteur(ostream& o) {
+		o << setw(26) << left << getNom();
+		o << "\tné en : " << getAnneeNaissance();
+		o << "\tpays : " << getPays() << endl;
+	}
 
 private:
 	std::string nom_;

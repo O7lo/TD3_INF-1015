@@ -9,7 +9,7 @@ template <typename T>
 class Liste
 {
 public:
-	//TODO: Constructeurs et surcharges d'opérateurs
+	//: Constructeurs et surcharges d'opérateurs
 	Liste() = default;
 
 	~Liste() {}
@@ -61,11 +61,6 @@ public:
 			}
 		}
 	}
-	/*Concepteur* (string nom) {
-		for (auto i : range(nElements_)) {
-			elements_.get()[i]->getNom();
-		}
-	}*/
 
 private:
 	unsigned nElements_=0;

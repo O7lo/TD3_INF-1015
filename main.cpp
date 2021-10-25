@@ -7,15 +7,27 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
+#include <functional>
 using namespace std;
 
-//TODO: Vos surcharges d'opérateur <<
+//: Vos surcharges d'opérateur <<
+//ostream& operator<< (ostream& o, const Concepteur& concepteur) {
+//	o << concepteur.getNom();
+//	o << concepteur.getAnneeNaissance();
+//	o << concepteur.getPays();
+//	return o;
+//}
+//ostream& operator<< (ostream& o, const Jeu& jeu) {
+//	o << jeu.getTitre();
+//	return o;
+//}
 ostream& operator<< (ostream& o, const Liste<Concepteur>& listeConcepteurs)
 {
 	for (auto i : iter::range(listeConcepteurs.size())) {
-		o << setw(26) << left << listeConcepteurs[i]->getNom();
+		/*o << setw(26) << left << listeConcepteurs[i]->getNom();
 		o << "\tné en : " << listeConcepteurs[i]->getAnneeNaissance();
-		o << "\tpays : " << listeConcepteurs[i]->getPays() << endl;
+		o << "\tpays : " << listeConcepteurs[i]->getPays() << endl;*/
+		o << listeConcepteurs[i]->afficherConcepteur(o);
 	}
 	return o;
 }
@@ -50,8 +62,14 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 		"\033[0m\n";
 
 	//TODO: Les l'affichage et l'écriture dans le fichier devraient fonctionner.
-	//cout << ligneSeparation << lj;
-	//ofstream("sortie.txt") << lj;
+	
+	cout << lj << endl;
+
+	cout << ligneSeparation << endl;
+	
+	Concepteur copieJeu = *lj[2]->getConcepteurs()[2];
+
+	cout << copieJeu << endl;
 
 	//TODO: Compléter le main avec les tests demandés.
 	//TODO: S'assurer qu'aucune ligne de code est non couverte.
@@ -59,6 +77,6 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 	//NOTE: Pour Liste, qui est générique, on demande de couvrir uniquement pour Liste<Jeu>, pas pour tous les types.
 
 
-	cout << lj << endl;
+	
 
 }
