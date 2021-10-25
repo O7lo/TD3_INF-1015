@@ -28,20 +28,21 @@ string lireString(istream& fichier)
 }
 #pragma endregion
 
-shared_ptr<Concepteur> chercherConcepteur(Liste<Jeu>& listeJeux, string nom)
+shared_ptr<Concepteur> chercherConcepteur(Liste<Jeu>& lj, string nom)
 {
 	//TODO: Compléter la fonction (équivalent de trouverDesigner du TD2).
-	for (unsigned i : iter::range(listeJeux.size())) {
-		shared_ptr<Liste<Concepteur>> listeConcepteur = listeJeux[i];
-		for (unsigned j : iter::range(listeJeux.size())) {
-			if (nom == listeConcepteur[j].getNom()) {
+
+	/*for (auto i : iter::range(lj.size())) {
+		Liste<Concepteur> listeConcepteur = lj[i]->getConcepteurs();
+		for (auto j : iter::range(listeConcepteur.size())) {
+			if (nom == listeConcepteur[j]->getNom()) {
 				return listeConcepteur[j];
 				break;
 			}
 		}
-	}
+	}*/
 
-	return {};
+	return nullptr;
 }
 
 shared_ptr<Concepteur> lireConcepteur(Liste<Jeu>& lj, istream& f)
@@ -89,7 +90,11 @@ Liste<Jeu> creerListeJeux(const string& nomFichier)
 	//TODO: Compléter la fonction.
 	Liste<Jeu> listeJeux;
 	for ([[maybe_unused]] int i : iter::range(nElements))
-		lireJeu(f, listeJeux);
+		listeJeux.ajouterElement(lireJeu(f, listeJeux));
 
-	return {};
+	
+
+
+
+	return listeJeux;
 }

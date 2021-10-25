@@ -1,7 +1,2 @@
 ﻿  lectureFichierJeux.cpp
-C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\lectureFichierJeux.cpp(35,63): error C2440: 'initialisation' : impossible de convertir de 'std::shared_ptr<Jeu>' en 'std::shared_ptr<Liste<Concepteur>>'
-C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\lectureFichierJeux.cpp(35,49): message : Aucun opérateur de conversion définie par l'utilisateur disponible qui puisse effectuer cette conversion, ou l'opérateur ne peut pas être appelé
-C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\lectureFichierJeux.cpp(37,32): error C2676: '[' binaire : 'std::shared_ptr<Liste<Concepteur>>' ne définit pas cet opérateur ou une conversion vers un type acceptable pour l'opérateur prédéfini
-C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\lectureFichierJeux.cpp(38,29): error C2676: '[' binaire : 'std::shared_ptr<Liste<Concepteur>>' ne définit pas cet opérateur ou une conversion vers un type acceptable pour l'opérateur prédéfini
-  main.cpp
-  Génération de code en cours...
+  ProjetTest.vcxproj -> C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\x64\Debug\TD3.exe
