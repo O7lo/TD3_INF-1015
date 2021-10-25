@@ -67,9 +67,6 @@ private:
 	unsigned nElements_=0;
 	unsigned capacite_=0;
 	//: Attribut contenant les éléments de la liste.
-<<<<<<< HEAD
-	std::shared_ptr<T[]> elements_ = nullptr;			
-=======
 	std::shared_ptr<std::shared_ptr<T>[]> elements_ = nullptr;			
->>>>>>> 2a6403fb6e8b6dbb37971002467cada1479dfaee
+
 };
