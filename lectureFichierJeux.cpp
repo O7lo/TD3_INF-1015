@@ -35,8 +35,8 @@ shared_ptr<Concepteur> chercherConcepteur(Liste<Jeu>& lj, string nom)
 	auto critere = [&nom](const auto concepteur) {
 		return concepteur.getNom() == nom;
 	};
-	for (unsigned i : iter::range(listeJeux.size())) {
-		shared_ptr<Concepteur> concepteurTrouve = listeJeux[i]->trouverConcepteur(critere);
+	for (unsigned i : iter::range(lj.size())) {
+		shared_ptr<Concepteur> concepteurTrouve = lj[i]->trouverConcepteur(critere);
 		if (concepteurTrouve!=nullptr) {
 			return concepteurTrouve;
 		}
@@ -86,7 +86,7 @@ Liste<Jeu> creerListeJeux(const string& nomFichier)
 	ifstream f(nomFichier, ios::binary);
 	f.exceptions(ios::failbit);
 	int nElements = lireUint16(f);
-	//TODO: Compléter la fonction.
+	// Compléter la fonction.
 	Liste<Jeu> listeJeux;
 	for ([[maybe_unused]] int i : iter::range(nElements))
 		listeJeux.ajouterElement(lireJeu(f, listeJeux));

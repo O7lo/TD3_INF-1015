@@ -9,7 +9,7 @@ template <typename T>
 class Liste
 {
 public:
-	//TODO: Constructeurs et surcharges d'opérateurs
+	// Constructeurs et surcharges d'opérateurs
 	Liste() = default;
 
 	~Liste() {}

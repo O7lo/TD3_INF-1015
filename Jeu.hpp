@@ -11,9 +11,7 @@ public:
 	//:un constructeur par défaut et un constructeur paramétré.
 	Jeu() = default;
 	Jeu(const std::string& titre, const unsigned& anneeSortie, const std::string& developpeur,const Liste<Concepteur>& listeConcepteurs):titre_(titre),anneeSortie_(anneeSortie),developpeur_(developpeur),listeConcepteurs_(listeConcepteurs) {
-		/*titre_=titre;
-		anneeSortie_=anneeSortie;
-		developpeur_=developpeur;*/
+
 	}
 
 	const std::string& getTitre() const { return titre_; }
@@ -25,13 +23,22 @@ public:
 
 	// Pouvoir accéder à la liste de concepteurs.
 	const Liste<Concepteur> getConcepteurs() const {
-		//Liste<Concepteur>* ptrListe = &listeConcepteurs_;
 		return listeConcepteurs_;
 	}
 	// Votre méthode pour trouver un concepteur selon un critère donné par une lambda, en utilisant la méthode de Liste.
 	template <typename critereLambda>
 	std::shared_ptr<Concepteur> trouverConcepteur(const critereLambda& critere) {
 		return listeConcepteurs_.trouver(critere);
+	}
+
+	const ostream& afficherJeu(ostream& o) const {
+		o << ligne << endl;
+		o << setw(36) << left << titre_;
+		o << "Développeur : " << setw(22) << left << developpeur_;
+		o << "    Sorti en " << anneeSortie_;
+		o << "\n\nConcepteurs du jeu:\n\n" << listeConcepteurs_.afficherListe();
+		o << ligne << endl;
+		return o;
 	}
 
 
