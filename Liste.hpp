@@ -1,3 +1,10 @@
+/**
+* La classe Liste  definit la liste pouvant contenir des jeux et des concepteurs et gere les operations qui sont possible de faire sur l'objet Liste.
+* /fichier	Liste.hpp
+* /auteurs	Pascal Gallant et Arthur Panoyan
+* /date		25 octobre 2021
+* Créé le	6 octobre 2021
+*/
 #pragma once
 #include <iostream>
 #include <memory>
@@ -9,7 +16,7 @@ template <typename T>
 class Liste
 {
 public:
-	//: Constructeurs et surcharges d'opérateurs
+	// Constructeurs et surcharges d'opérateurs
 	Liste() = default;
 
 	~Liste() {}

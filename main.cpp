@@ -1,4 +1,11 @@
-﻿#include "bibliotheque_cours.hpp"
+﻿/**
+* Fonction pricipale du programme qui affiche une liste de jeux et de concepteurs.
+* /fichier	main.cpp
+* /auteurs	Pascal Gallant et Arthur Panoyan
+* /date		25 octobre 2021
+* Créé le	6 octobre 2021
+*/
+#include "bibliotheque_cours.hpp"
 #include "verification_allocation.hpp"
 #include "Liste.hpp"
 #include "Concepteur.hpp"
@@ -11,27 +18,27 @@
 using namespace std;
 
 //: Vos surcharges d'opérateur <<
-//ostream& operator<< (ostream& o, const Concepteur& concepteur) {
-//	o << concepteur.getNom();
-//	o << concepteur.getAnneeNaissance();
-//	o << concepteur.getPays();
-//	return o;
-//}
-//ostream& operator<< (ostream& o, const Jeu& jeu) {
-//	o << jeu.getTitre();
-//	return o;
-//}
+ostream& operator<< (ostream& o, const Concepteur& concepteur) {
+	o << concepteur.getNom();
+	o << concepteur.getAnneeNaissance();
+	o << concepteur.getPays();
+	return o;
+}
+ostream& operator<< (ostream& o, const Jeu& jeu) {
+	o << jeu.getTitre();
+	return o;
+}
+
 ostream& operator<< (ostream& o, const Liste<Concepteur>& listeConcepteurs)
 {
 	for (auto i : iter::range(listeConcepteurs.size())) {
-		/*o << setw(26) << left << listeConcepteurs[i]->getNom();
+		o << setw(26) << left << listeConcepteurs[i]->getNom();
 		o << "\tné en : " << listeConcepteurs[i]->getAnneeNaissance();
-		o << "\tpays : " << listeConcepteurs[i]->getPays() << endl;*/
-		o << listeConcepteurs[i]->afficherConcepteur(o);
+		o << "\tpays : " << listeConcepteurs[i]->getPays() << endl;
 	}
 	return o;
 }
-ostream& operator<< (ostream& o, const Liste<Jeu>& listeJeux) 
+ostream& operator<< (ostream& o, const Liste<Jeu>& listeJeux)
 {
 	string ligne = "\n\033[35m- - - - - - - - - - - - - - - - - - - - \033[0m\n";
 	for (auto i : iter::range(listeJeux.size())) {
@@ -46,6 +53,7 @@ ostream& operator<< (ostream& o, const Liste<Jeu>& listeJeux)
 }
 
 
+const string ligne = "\n\033[35m- - - - - - - - - - - - - - - - - - - - \033[0m\n";
 
 int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 {
@@ -67,11 +75,23 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 
 	cout << ligneSeparation << endl;
 	
-	Concepteur copieJeu = *lj[2]->getConcepteurs()[2];
+	Jeu copieJeu = *lj[5];
 
 	cout << copieJeu << endl;
 
-	//TODO: Compléter le main avec les tests demandés.
+	//TODO: Compléter le main avec les tests demandés.	
+	ofstream listeEcrire;
+	listeEcrire.open("jeux.txt");
+
+	listeEcrire << lj << endl;
+
+	listeEcrire.close();
+
+
+		
+
+
+
 	//TODO: S'assurer qu'aucune ligne de code est non couverte.
 	//NOTE: Il n'est pas nécessaire de couvrir les getters/setters simples fournis; il faut tester si vous en ajoutez ou les modifiez.
 	//NOTE: Pour Liste, qui est générique, on demande de couvrir uniquement pour Liste<Jeu>, pas pour tous les types.

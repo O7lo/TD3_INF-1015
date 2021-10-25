@@ -1,4 +1,12 @@
-	// Fonctions pour lire le fichier binaire.
+/**
+*  Definitions des donctions pour lire le fichier binaire.
+* /fichier	LectureFichierJeux.cpp
+* /auteurs	Pascal Gallant et Arthur Panoyan
+* /date		25 octobre 2021
+* Créé le	6 octobre 2021
+*/
+
+
 #include "lectureFichierJeux.hpp"
 #include <fstream>
 #include "cppitertools/range.hpp"
