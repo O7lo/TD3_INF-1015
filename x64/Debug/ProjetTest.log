@@ -1,6 +1,14 @@
 ﻿  lectureFichierJeux.cpp
+<<<<<<< HEAD
 C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\lectureFichierJeux.cpp(31,55): warning C4100: 'listeJeux' : paramètre formel non référencé
 C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\lectureFichierJeux.cpp(39,51): warning C4100: 'lj' : paramètre formel non référencé
 C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\lectureFichierJeux.cpp(42,11): warning C4189: 'anneeNaissance' : variable locale initialisée mais non référencée
 C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\lectureFichierJeux.cpp(55,11): warning C4189: 'anneeSortie' : variable locale initialisée mais non référencée
   ProjetTest.vcxproj -> C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\x64\Debug\TD3.exe
+=======
+C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\lectureFichierJeux.cpp(31,55): warning C4100: 'listeJeux' : paramètre formel non référencé
+  main.cpp
+  Génération de code en cours...
+     Création de la bibliothèque C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\x64\Debug\TD3.lib et de l'objet C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\x64\Debug\TD3.exp
+  ProjetTest.vcxproj -> C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\x64\Debug\TD3.exe
+>>>>>>> 2a6403fb6e8b6dbb37971002467cada1479dfaee
