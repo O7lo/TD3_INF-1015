@@ -24,7 +24,7 @@ public:
 	void setDeveloppeur(const std::string& developpeur) { developpeur_ = developpeur; }
 
 	// Pouvoir accéder à la liste de concepteurs.
-	const Liste<Concepteur>& getConcepteurs() const {
+	const Liste<Concepteur> getConcepteurs() const {
 		//Liste<Concepteur>* ptrListe = &listeConcepteurs_;
 		return listeConcepteurs_;
 	}
