@@ -31,7 +31,15 @@ string lireString(istream& fichier)
 shared_ptr<Concepteur> chercherConcepteur(Liste<Jeu>& listeJeux, string nom)
 {
 	//TODO: Compléter la fonction (équivalent de trouverDesigner du TD2).
-	
+	for (unsigned i : iter::range(listeJeux.size())) {
+		shared_ptr<Liste<Concepteur>> listeConcepteur = listeJeux[i];
+		for (unsigned j : iter::range(listeJeux.size())) {
+			if (nom == listeConcepteur[j].getNom()) {
+				return listeConcepteur[j];
+				break;
+			}
+		}
+	}
 
 	return {};
 }

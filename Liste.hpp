@@ -14,7 +14,7 @@ public:
 
 	~Liste() { std::cout << "Détruit!" << std::endl; }
 
-	T& operator[] (const int indice) const
+	std::shared_ptr<T> operator[] (const int indice) const
 	{ 
 		return elements_[indice];
 	}
@@ -58,5 +58,5 @@ private:
 	unsigned nElements_;
 	unsigned capacite_;
 	//: Attribut contenant les éléments de la liste.
-	std::unique_ptr<T[]> elements_ = nullptr;			
+	std::shared_ptr<T[]> elements_ = nullptr;			
 };
