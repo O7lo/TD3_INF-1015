@@ -1,6 +1,4 @@
 ﻿  lectureFichierJeux.cpp
-C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\lectureFichierJeux.cpp(31,55): warning C4100: 'listeJeux' : paramètre formel non référencé
-  main.cpp
-  Génération de code en cours...
+C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\Liste.hpp(63): warning C4715: 'Liste<Concepteur>::trouver<`chercherConcepteur'::`2'::<lambda_1> >' : les chemins de contrôle ne retournent pas tous une valeur
      Création de la bibliothèque C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\x64\Debug\TD3.lib et de l'objet C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\x64\Debug\TD3.exp
   ProjetTest.vcxproj -> C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\x64\Debug\TD3.exe

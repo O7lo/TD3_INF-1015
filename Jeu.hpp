@@ -29,10 +29,9 @@ public:
 		return listeConcepteurs_;
 	}
 	// Votre méthode pour trouver un concepteur selon un critère donné par une lambda, en utilisant la méthode de Liste.
-	
-	template<typename CritereLambda>
-	Concepteur trouverConcepteur(const CritereLambda& critere) {
-		return listeConcepteurs_->trouver(critere);
+	template <typename critereLambda>
+	std::shared_ptr<Concepteur> trouverConcepteur(const critereLambda& critere) {
+		return listeConcepteurs_.trouver(critere);
 	}
 
 

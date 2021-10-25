@@ -53,15 +53,19 @@ public:
 	}
 
 	//: Méthode pour trouver une élément selon un critère (lambda).
-	template<typename CritereLambda>
-	T trouver(const CritereLambda& critere) {
+	template <typename critereLambda>
+	std::shared_ptr<T> trouver(const critereLambda& critere) {
 		for (int i : iter::range(nElements_)) {
-			if (critere(elements_[i])) {
-				return elements_[i];
+			if (critere(*elements_.get()[i])) {
+				return elements_.get()[i];
 			}
 		}
 	}
-
+	/*Concepteur* (string nom) {
+		for (auto i : range(nElements_)) {
+			elements_.get()[i]->getNom();
+		}
+	}*/
 
 private:
 	unsigned nElements_=0;

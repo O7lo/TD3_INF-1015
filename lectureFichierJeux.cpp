@@ -2,6 +2,7 @@
 #include "lectureFichierJeux.hpp"
 #include <fstream>
 #include "cppitertools/range.hpp"
+#include <functional>
 using namespace std;
 
 #pragma region "Fonctions de lecture de base"
@@ -30,10 +31,17 @@ string lireString(istream& fichier)
 
 shared_ptr<Concepteur> chercherConcepteur(Liste<Jeu>& listeJeux, string nom)
 {
-	//TODO: Compléter la fonction (équivalent de trouverDesigner du TD2).
-	
-
-	return {};
+	// Compléter la fonction (équivalent de trouverDesigner du TD2).
+	auto critere = [&nom](const auto concepteur) {
+		return concepteur.getNom() == nom;
+	};
+	for (unsigned i : iter::range(listeJeux.size())) {
+		shared_ptr<Concepteur> concepteurTrouve = listeJeux[i]->trouverConcepteur(critere);
+		if (concepteurTrouve!=nullptr) {
+			return concepteurTrouve;
+		}
+	}
+	return nullptr;
 }
 
 shared_ptr<Concepteur> lireConcepteur(Liste<Jeu>& lj, istream& f)
@@ -62,7 +70,7 @@ shared_ptr<Jeu> lireJeu(istream& f, Liste<Jeu>& lj)
 	unsigned anneeSortie  = lireUint16(f);
 	string developpeur    = lireString(f);
 	unsigned nConcepteurs = lireUint8(f);
-	//TODO: Compléter la fonction (équivalent de lireJeu du TD2).
+	// Compléter la fonction (équivalent de lireJeu du TD2).
 	Liste<Concepteur> listeConcepteurs;
 	for (unsigned int i = 0; i < nConcepteurs; i++) {
 		listeConcepteurs.ajouterElement(lireConcepteur(lj, f));
