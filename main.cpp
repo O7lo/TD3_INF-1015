@@ -20,8 +20,6 @@ using namespace std;
 //: Vos surcharges d'opérateur <<
 ostream& operator<< (ostream& o, const Concepteur& concepteur) {
 	o << concepteur.getNom();
-	o << concepteur.getAnneeNaissance();
-	o << concepteur.getPays();
 	return o;
 }
 ostream& operator<< (ostream& o, const Jeu& jeu) {
@@ -75,9 +73,13 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 
 	cout << ligneSeparation << endl;
 	
-	Jeu copieJeu = *lj[5];
+	Jeu copieJeu = *lj[2];
 
 	cout << copieJeu << endl;
+
+	Concepteur copieConcepteur = *lj[2]->getConcepteurs()[1];
+
+	cout << copieConcepteur << endl;
 
 	//TODO: Compléter le main avec les tests demandés.	
 	ofstream listeEcrire;
