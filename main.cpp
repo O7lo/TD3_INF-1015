@@ -77,6 +77,7 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 		"══════════════════════════════════════════════════════════════════════════"
 		"\033[0m\n";
 
+	
 	//TODO: Les l'affichage et l'écriture dans le fichier devraient fonctionner.
 	
 	cout << lj << endl;
@@ -91,13 +92,25 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 
 	cout << copieConcepteur << endl;
 
-	//Compléter le main avec les tests demandés.	
+	//TODO: Compléter le main avec les tests demandés.	
+	//test de ajout de jeu dans un fichiers
 	ofstream listeEcrire;
 	listeEcrire.open("jeux.txt");
 
 	listeEcrire << lj << endl;
 
 	listeEcrire.close();
+	//test operateur =
+	if (lj[2] == lj[3]) {
+		cout << lj[2] << "est egale" << endl;
+	}
+	else {
+		cout << "ne sont pas egale" << endl;
+	}
+	//test get capacite
+
+	cout << lj.getCapacite() << endl;
+
 
 	shared_ptr<Concepteur> concepteurPersonnalise = make_shared<Concepteur>();
 	concepteurPersonnalise->setNom("Jean-Guy Thibodeau");
