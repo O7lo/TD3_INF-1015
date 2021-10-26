@@ -1,14 +1,17 @@
 
-[92m══════════════════════════════════════════════════════════════════════════[0m
-
-
 [35m- - - - - - - - - - - - - - - - - - - - [0m
 
 Chrono Trigger                      Développeur : Square                    Sorti en 1995
 
 Concepteurs du jeu:
 
-Hironobu Sakaguchi1962JaponYuji Horii1954JaponAkira Toriyama1955JaponYoshinori Kitase1966JaponMasato Kato1963JaponYasunori Mitsuda1972Japon
+Hironobu Sakaguchi        	né en : 1962	pays : Japon
+Yuji Horii                	né en : 1954	pays : Japon
+Akira Toriyama            	né en : 1955	pays : Japon
+Yoshinori Kitase          	né en : 1966	pays : Japon
+Masato Kato               	né en : 1963	pays : Japon
+Yasunori Mitsuda          	né en : 1972	pays : Japon
+
 [35m- - - - - - - - - - - - - - - - - - - - [0m
 
 
@@ -18,7 +21,10 @@ Final Fantasy VI (III en Amérique) Développeur : Square                    Sor
 
 Concepteurs du jeu:
 
-Hironobu Sakaguchi1962JaponYoshinori Kitase1966JaponNobuo Uematsu1959Japon
+Hironobu Sakaguchi        	né en : 1962	pays : Japon
+Yoshinori Kitase          	né en : 1966	pays : Japon
+Nobuo Uematsu             	né en : 1959	pays : Japon
+
 [35m- - - - - - - - - - - - - - - - - - - - [0m
 
 
@@ -28,7 +34,10 @@ Secret of Mana                      Développeur : Square                    Sor
 
 Concepteurs du jeu:
 
-Koichi Ishii1964JaponHiromichi Tanaka1962JaponHiroki Kikuta1962Japon
+Koichi Ishii              	né en : 1964	pays : Japon
+Hiromichi Tanaka          	né en : 1962	pays : Japon
+Hiroki Kikuta             	né en : 1962	pays : Japon
+
 [35m- - - - - - - - - - - - - - - - - - - - [0m
 
 
@@ -38,7 +47,10 @@ Super Mario Bros                    Développeur : Nintendo                  Sor
 
 Concepteurs du jeu:
 
-Shigeru Miyamoto1952JaponTakashi Tezuka1960JaponKoji Kondo1961Japon
+Shigeru Miyamoto          	né en : 1952	pays : Japon
+Takashi Tezuka            	né en : 1960	pays : Japon
+Koji Kondo                	né en : 1961	pays : Japon
+
 [35m- - - - - - - - - - - - - - - - - - - - [0m
 
 
@@ -48,7 +60,10 @@ The Legend of Zelda                 Développeur : Nintendo                  Sor
 
 Concepteurs du jeu:
 
-Shigeru Miyamoto1952JaponTakashi Tezuka1960JaponKoji Kondo1961Japon
+Shigeru Miyamoto          	né en : 1952	pays : Japon
+Takashi Tezuka            	né en : 1960	pays : Japon
+Koji Kondo                	né en : 1961	pays : Japon
+
 [35m- - - - - - - - - - - - - - - - - - - - [0m
 
 
@@ -58,7 +73,9 @@ Metroid                             Développeur : Nintendo                  Sor
 
 Concepteurs du jeu:
 
-Satoru Okada1947JaponHirokazu Tanaka1957Japon
+Satoru Okada              	né en : 1947	pays : Japon
+Hirokazu Tanaka           	né en : 1957	pays : Japon
+
 [35m- - - - - - - - - - - - - - - - - - - - [0m
 
 
@@ -68,7 +85,10 @@ Pokémon Red & Blue                 Développeur : Game Freak                Sor
 
 Concepteurs du jeu:
 
-Shigeru Miyamoto1952JaponSatoshi Tajiri1965JaponJunichi Masuda1968Japon
+Shigeru Miyamoto          	né en : 1952	pays : Japon
+Satoshi Tajiri            	né en : 1965	pays : Japon
+Junichi Masuda            	né en : 1968	pays : Japon
+
 [35m- - - - - - - - - - - - - - - - - - - - [0m
 
 
@@ -78,7 +98,9 @@ Minecraft                           Développeur : Mojang                    Sor
 
 Concepteurs du jeu:
 
-Markus Alexej Persson1979SuèdeJens Peder Bergensten1979Suède
+Markus Alexej Persson     	né en : 1979	pays : Suède
+Jens Peder Bergensten     	né en : 1979	pays : Suède
+
 [35m- - - - - - - - - - - - - - - - - - - - [0m
 
 
@@ -88,7 +110,10 @@ World of Warcraft                   Développeur : Blizzard Entertainment    Sor
 
 Concepteurs du jeu:
 
-Rob Pardo1970États-UnisJeffrey Kaplan1972États-UnisChristopher Vincent Metzen1973États-Unis
+Rob Pardo                 	né en : 1970	pays : États-Unis
+Jeffrey Kaplan            	né en : 1972	pays : États-Unis
+Christopher Vincent Metzen	né en : 1973	pays : États-Unis
+
 [35m- - - - - - - - - - - - - - - - - - - - [0m
 
 
@@ -98,7 +123,9 @@ Castlevania: Symphony of the Night  Développeur : Konami                    Sor
 
 Concepteurs du jeu:
 
-Koji Igarashi1968JaponMichiru Yamane1963Japon
+Koji Igarashi             	né en : 1968	pays : Japon
+Michiru Yamane            	né en : 1963	pays : Japon
+
 [35m- - - - - - - - - - - - - - - - - - - - [0m
 
 
@@ -108,7 +135,8 @@ The Sims                            Développeur : Maxis                     Sor
 
 Concepteurs du jeu:
 
-William Ralph Wright1960États-Unis
+William Ralph Wright      	né en : 1960	pays : États-Unis
+
 [35m- - - - - - - - - - - - - - - - - - - - [0m
 
 
@@ -118,7 +146,8 @@ SimCity                             Développeur : Maxis                     Sor
 
 Concepteurs du jeu:
 
-William Ralph Wright1960États-Unis
+William Ralph Wright      	né en : 1960	pays : États-Unis
+
 [35m- - - - - - - - - - - - - - - - - - - - [0m
 
 
@@ -128,7 +157,9 @@ Metal Gear Solid                    Développeur : Konami                    Sor
 
 Concepteurs du jeu:
 
-Hideo Kojima1963JaponYoji Shinkawa1971Japon
+Hideo Kojima              	né en : 1963	pays : Japon
+Yoji Shinkawa             	né en : 1971	pays : Japon
+
 [35m- - - - - - - - - - - - - - - - - - - - [0m
 
 
@@ -138,7 +169,9 @@ Half-Life                           Développeur : Valve                     Sor
 
 Concepteurs du jeu:
 
-Gabe Logan Newell1962États-UnisMarc Laidlaw1960États-Unis
+Gabe Logan Newell         	né en : 1962	pays : États-Unis
+Marc Laidlaw              	né en : 1960	pays : États-Unis
+
 [35m- - - - - - - - - - - - - - - - - - - - [0m
 
 
@@ -148,7 +181,9 @@ Civilization                        Développeur : MicroProse                Sor
 
 Concepteurs du jeu:
 
-Sidney K. Meier1954CanadaDr. Jeffery L. Briggs1957États-Unis
+Sidney K. Meier           	né en : 1954	pays : Canada
+Dr. Jeffery L. Briggs     	né en : 1957	pays : États-Unis
+
 [35m- - - - - - - - - - - - - - - - - - - - [0m
 
 
@@ -158,7 +193,10 @@ Sonic the Hedgehog                  Développeur : Sega                      Sor
 
 Concepteurs du jeu:
 
-Hirokazu Yasuhara1965JaponYuji Naka1965JaponMasato Nakamura1958Japon
+Hirokazu Yasuhara         	né en : 1965	pays : Japon
+Yuji Naka                 	né en : 1965	pays : Japon
+Masato Nakamura           	né en : 1958	pays : Japon
+
 [35m- - - - - - - - - - - - - - - - - - - - [0m
 
 
@@ -168,10 +206,9 @@ Dark Souls                          Développeur : FromSoftware              Sor
 
 Concepteurs du jeu:
 
-Hidetaka Miyazaki1975JaponMotoi Sakuraba1965Japon
+Hidetaka Miyazaki         	né en : 1975	pays : Japon
+Motoi Sakuraba            	né en : 1965	pays : Japon
+
 [35m- - - - - - - - - - - - - - - - - - - - [0m
-
-
-[92m══════════════════════════════════════════════════════════════════════════[0m
 
 
