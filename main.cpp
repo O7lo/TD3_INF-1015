@@ -17,6 +17,11 @@
 #include <functional>
 using namespace std;
 
+static const string ligne = "\n\033[35m- - - - - - - - - - - - - - - - - - - - \033[0m\n";
+static const string ligneSeparation = "\n\033[92m"
+		"══════════════════════════════════════════════════════════════════════════"
+		"\033[0m\n";
+
 //: Vos surcharges d'opérateur <<
 ostream& operator<< (ostream& o, const Concepteur& concepteur) {
 	o << concepteur.getNom();
@@ -24,36 +29,37 @@ ostream& operator<< (ostream& o, const Concepteur& concepteur) {
 	o << concepteur.getPays();
 	return o;
 }
-ostream& operator<< (ostream& o, const Jeu& jeu) {
-	o << jeu.getTitre();
-	return o;
-}
 
 ostream& operator<< (ostream& o, const Liste<Concepteur>& listeConcepteurs)
 {
 	for (auto i : iter::range(listeConcepteurs.size())) {
-		o << setw(26) << left << listeConcepteurs[i]->getNom();
-		o << "\tné en : " << listeConcepteurs[i]->getAnneeNaissance();
-		o << "\tpays : " << listeConcepteurs[i]->getPays() << endl;
+		o << *listeConcepteurs[i];
 	}
 	return o;
 }
+
+ostream& operator<< (ostream& o, const Jeu& jeu) {
+	o << ligne << endl;
+	o << setw(36) << left << jeu.getTitre();
+	o << "Développeur : " << setw(22) << left << jeu.getDeveloppeur();
+	o << "    Sorti en " << jeu.getAnneeSortie();
+	o << "\n\nConcepteurs du jeu:\n\n" << jeu.getConcepteurs();
+	o << ligne << endl;
+	return o;
+}
+
 ostream& operator<< (ostream& o, const Liste<Jeu>& listeJeux)
 {
-	string ligne = "\n\033[35m- - - - - - - - - - - - - - - - - - - - \033[0m\n";
+	o << ligneSeparation << endl;
 	for (auto i : iter::range(listeJeux.size())) {
-		o << ligne << endl;
-		o << setw(36) << left << listeJeux[i]->getTitre();
-		o << "Développeur : " << setw(22) << left << listeJeux[i]->getDeveloppeur();
-		o << "    Sorti en " << listeJeux[i]->getAnneeSortie();
-		o << "\n\nConcepteurs du jeu:\n\n" << listeJeux[i]->getConcepteurs();
-		o << ligne << endl;
+		o << *listeJeux[i];
 	}
+	o << ligneSeparation << endl;
 	return o;
 }
 
 
-const string ligne = "\n\033[35m- - - - - - - - - - - - - - - - - - - - \033[0m\n";
+
 
 int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 {
@@ -65,21 +71,19 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 	#pragma endregion
 	
 	Liste<Jeu> lj = creerListeJeux("jeux.bin");
-	static const string ligneSeparation = "\n\033[92m"
-		"══════════════════════════════════════════════════════════════════════════"
-		"\033[0m\n";
+	
 
-	//TODO: Les l'affichage et l'écriture dans le fichier devraient fonctionner.
+	// Les l'affichage et l'écriture dans le fichier devraient fonctionner.
 	
 	cout << lj << endl;
 
-	cout << ligneSeparation << endl;
+	
 	
 	Jeu copieJeu = *lj[5];
 
 	cout << copieJeu << endl;
 
-	//TODO: Compléter le main avec les tests demandés.	
+	// Compléter le main avec les tests demandés.	
 	ofstream listeEcrire;
 	listeEcrire.open("jeux.txt");
 

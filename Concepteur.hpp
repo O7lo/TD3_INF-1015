@@ -28,12 +28,6 @@ public:
 	const std::string& getPays() const    { return pays_; }
 	void setPays(const std::string& pays) { pays_ = pays; }
 
-	//const ostream& afficher(ostream& o) const {
-	//	o << setw(26) << left << getNom();
-	//	o << "\tné en : " << getAnneeNaissance();
-	//	o << "\tpays : " << getPays() << endl;
-	//	return o;
-	//}
 
 private:
 	std::string nom_;

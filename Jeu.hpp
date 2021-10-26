@@ -37,17 +37,6 @@ public:
 	std::shared_ptr<Concepteur> trouverConcepteur(const critereLambda& critere) {
 		return listeConcepteurs_.trouver(critere);
 	}
-	//
-	//const ostream& afficher(ostream& o) const {
-	//	o << ligne << endl;
-	//	o << setw(36) << left << titre_;
-	//	o << "Développeur : " << setw(22) << left << developpeur_;
-	//	o << "    Sorti en " << anneeSortie_;
-	//	/*o << "\n\nConcepteurs du jeu:\n\n" << listeConcepteurs_.afficherListe();*/
-	//	o << ligne << endl;
-	//	return o;
-	//}
-
 
 private:
 	std::string titre_;
