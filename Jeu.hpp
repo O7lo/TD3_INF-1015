@@ -32,6 +32,9 @@ public:
 	const Liste<Concepteur> getConcepteurs() const {
 		return listeConcepteurs_;
 	}
+	void setConcepteurs(const Liste<Concepteur>& listeConcepteurs) {
+		listeConcepteurs_ = listeConcepteurs; 
+	}
 	// Votre méthode pour trouver un concepteur selon un critère donné par une lambda, en utilisant la méthode de Liste.
 	template <typename critereLambda>
 	std::shared_ptr<Concepteur> trouverConcepteur(const critereLambda& critere) {
@@ -39,9 +42,9 @@ public:
 	}
 
 private:
-	std::string titre_;
-	unsigned anneeSortie_;
-	std::string developpeur_;
+	std::string titre_ = "NON_DEFINI";
+	unsigned anneeSortie_ = 0;
+	std::string developpeur_ = "NON_DEFINI";
 	// Attribut de la liste des concepteurs du jeu
 	Liste<Concepteur> listeConcepteurs_;
 };

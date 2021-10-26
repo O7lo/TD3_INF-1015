@@ -26,7 +26,7 @@ public:
 		return elements_.get()[indice];
 	}
 	
-	T& operator= (const Liste<T> autre) const {
+	Liste<T>& operator= (const Liste<T> autre) {
 		this->capacite_ = autre.getCapacite();
 		this->nElements_ = autre.size();
 		for (int i : iter::range(nElements_)) {
@@ -66,8 +66,8 @@ public:
 			if (critere(*elements_.get()[i])) {
 				return elements_.get()[i];
 			}
-			else return nullptr;
 		}
+		return nullptr;
 	}
 
 private:

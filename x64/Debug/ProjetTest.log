@@ -1,7 +1,5 @@
 ﻿  lectureFichierJeux.cpp
   main.cpp
   Génération de code en cours...
-C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\Liste.hpp(65): warning C4702: impossible d'atteindre le code
-C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\Liste.hpp(71): warning C4715: 'Liste<Concepteur>::trouver<`chercherConcepteur'::`2'::<lambda_1> >' : les chemins de contrôle ne retournent pas tous une valeur
      Création de la bibliothèque C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\x64\Debug\TD3.lib et de l'objet C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\x64\Debug\TD3.exp
   ProjetTest.vcxproj -> C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\x64\Debug\TD3.exe

@@ -99,12 +99,21 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 
 	listeEcrire.close();
 
-	Concepteur concepteurPersonnalise;
-	concepteurPersonnalise.setNom("Jean-Guy Thibodeau");
-	concepteurPersonnalise.setAnneeNaissance(40);
-	concepteurPersonnalise.setPays("on s'en %!$& comme dans l'an de sa naissance.");
+	shared_ptr<Concepteur> concepteurPersonnalise = make_shared<Concepteur>();
+	concepteurPersonnalise->setNom("Jean-Guy Thibodeau");
+	concepteurPersonnalise->setAnneeNaissance(40);
+	concepteurPersonnalise->setPays("on s'en %!$& comme dans l'an de sa naissance.");
 	cout << concepteurPersonnalise;
+	
+	Liste<Concepteur> concepteurs;
+	concepteurs.ajouterElement(concepteurPersonnalise);
 
+	Jeu jeuperso;
+	jeuperso.setTitre("Juste le meilleur jeu de tous les temps!");
+	jeuperso.setAnneeSortie(2022);
+	jeuperso.setDeveloppeur("arthur le mythique et Pascal le légendaire");
+	jeuperso.setConcepteurs(concepteurs);
+	cout << jeuperso;
 	//TODO: S'assurer qu'aucune ligne de code est non couverte.
 	//NOTE: Il n'est pas nécessaire de couvrir les getters/setters simples fournis; il faut tester si vous en ajoutez ou les modifiez.
 	//NOTE: Pour Liste, qui est générique, on demande de couvrir uniquement pour Liste<Jeu>, pas pour tous les types.
