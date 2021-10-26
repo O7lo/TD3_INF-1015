@@ -30,7 +30,7 @@ public:
 
 
 private:
-	std::string nom_;
-	unsigned anneeNaissance_;
-	std::string pays_;
+	std::string nom_ = "NON_DEFINI";
+	unsigned anneeNaissance_ = 0;
+	std::string pays_ = "NON_DEFINI";
 };

@@ -66,6 +66,7 @@ public:
 			if (critere(*elements_.get()[i])) {
 				return elements_.get()[i];
 			}
+			else return nullptr;
 		}
 	}
 

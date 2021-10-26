@@ -17,13 +17,13 @@
 #include <functional>
 using namespace std;
 
+const string ligne = "\n\033[35m- - - - - - - - - - - - - - - - - - - - \033[0m\n";
+
 //: Vos surcharges d'opérateur <<
 ostream& operator<< (ostream& o, const Concepteur& concepteur) {
-	o << concepteur.getNom();
-	return o;
-}
-ostream& operator<< (ostream& o, const Jeu& jeu) {
-	o << jeu.getTitre();
+	o << setw(26) << left << concepteur.getNom();
+	o << "\tné en : " << concepteur.getAnneeNaissance();
+	o << "\tpays : " << concepteur.getPays() << endl;
 	return o;
 }
 
@@ -36,9 +36,20 @@ ostream& operator<< (ostream& o, const Liste<Concepteur>& listeConcepteurs)
 	}
 	return o;
 }
+
+ostream& operator<< (ostream& o, const Jeu& jeu) {
+	o << ligne << endl;
+	o << setw(36) << left << jeu.getTitre();
+	o << "Développeur : " << setw(22) << left << jeu.getDeveloppeur();
+	o << "    Sorti en " << jeu.getAnneeSortie();
+	o << "\n\nConcepteurs du jeu:\n\n" << jeu.getConcepteurs();
+	o << ligne << endl;
+	return o;
+}
+
 ostream& operator<< (ostream& o, const Liste<Jeu>& listeJeux)
 {
-	string ligne = "\n\033[35m- - - - - - - - - - - - - - - - - - - - \033[0m\n";
+	//string ligne = "\n\033[35m- - - - - - - - - - - - - - - - - - - - \033[0m\n";
 	for (auto i : iter::range(listeJeux.size())) {
 		o << ligne << endl;
 		o << setw(36) << left << listeJeux[i]->getTitre();
@@ -51,7 +62,6 @@ ostream& operator<< (ostream& o, const Liste<Jeu>& listeJeux)
 }
 
 
-const string ligne = "\n\033[35m- - - - - - - - - - - - - - - - - - - - \033[0m\n";
 
 int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 {
@@ -81,7 +91,7 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 
 	cout << copieConcepteur << endl;
 
-	//TODO: Compléter le main avec les tests demandés.	
+	//Compléter le main avec les tests demandés.	
 	ofstream listeEcrire;
 	listeEcrire.open("jeux.txt");
 
@@ -89,6 +99,11 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 
 	listeEcrire.close();
 
+	Concepteur concepteurPersonnalise;
+	concepteurPersonnalise.setNom("Jean-Guy Thibodeau");
+	concepteurPersonnalise.setAnneeNaissance(40);
+	concepteurPersonnalise.setPays("on s'en %!$& comme dans l'an de sa naissance.");
+	cout << concepteurPersonnalise;
 
 	//TODO: S'assurer qu'aucune ligne de code est non couverte.
 	//NOTE: Il n'est pas nécessaire de couvrir les getters/setters simples fournis; il faut tester si vous en ajoutez ou les modifiez.
