@@ -29,9 +29,8 @@ public:
 	Liste<T>& operator= (const Liste<T> autre) {
 		this->capacite_ = autre.getCapacite();
 		this->nElements_ = autre.size();
-		for (int i : iter::range(nElements_)) {
-			this->elements_[i] = autre.elements_[i];
-		}
+		this->elements_.reset();
+		this->elements_ = autre.getElements();
 		return *this;
 	}
 
@@ -46,6 +45,7 @@ public:
 	// Pour size, on utilise le même nom que les accesseurs de la bibliothèque standard, qui permet d'utiliser certaines fonctions de la bibliotheque sur cette classe.
 	unsigned size() const         { return nElements_; }
 	unsigned getCapacite() const  { return capacite_; }
+	std::shared_ptr<std::shared_ptr<T>[]> getElements() const { return elements_; }
 
 	//: Méthode pour changer la capacité de la liste
 	void changerCapacite(unsigned nouvelleCapacite) {
