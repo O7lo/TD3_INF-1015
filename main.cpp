@@ -2,7 +2,7 @@
 * Fonction pricipale du programme qui affiche une liste de jeux et de concepteurs.
 * /fichier	main.cpp
 * /auteurs	Pascal Gallant et Arthur Panoyan
-* /date		25 octobre 2021
+* /date		26 octobre 2021
 * Créé le	6 octobre 2021
 */
 #include "bibliotheque_cours.hpp"

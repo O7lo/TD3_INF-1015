@@ -2,7 +2,7 @@
 * La classe Jeu  definit les jeux et gere les operations qui sont possible de faire sur un objet Jeu
 * /fichier	jeu.hpp
 * /auteurs	Pascal Gallant et Arthur Panoyan
-* /date		25 octobre 2021
+* /date		26 octobre 2021
 * Créé le	6 octobre 2021
 */
 #pragma once

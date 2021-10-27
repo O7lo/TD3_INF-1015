@@ -2,7 +2,7 @@
 *  Definitions des donctions pour lire le fichier binaire.
 * /fichier	LectureFichierJeux.cpp
 * /auteurs	Pascal Gallant et Arthur Panoyan
-* /date		25 octobre 2021
+* /date		26 octobre 2021
 * Créé le	6 octobre 2021
 */
 
@@ -96,12 +96,8 @@ Liste<Jeu> creerListeJeux(const string& nomFichier)
 	int nElements = lireUint16(f);
 	//: Compléter la fonction.
 	Liste<Jeu> listeJeux;
-	for ([[maybe_unused]] int i : iter::range(nElements))
+	for ([[maybe_unused]] int i : iter::range(nElements)) {
 		listeJeux.ajouterElement(lireJeu(f, listeJeux));
-
-	
-
-
-
+	}
 	return listeJeux;
 }
