@@ -121,7 +121,21 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 	Liste<Concepteur> concepteurs;
 	concepteurs.ajouterElement(make_shared<Concepteur>(copieConcepteur));
 
+	Concepteur concepteurParDefaut;
+	concepteurParDefaut.setNom("billy");
+	concepteurParDefaut.setAnneeNaissance(2000);
+	concepteurParDefaut.setPays("kébak");
+	cout << concepteurParDefaut;
 
+	Jeu jeu;
+	jeu.setTitre("monsieur patate");
+	jeu.setDeveloppeur("raymarine");
+	jeu.setAnneeSortie(2012);
+	//shared_ptr<Concepteur> ptrConcepteur = make_shared<Concepteur>(concepteurParDefaut);
+	Liste<Concepteur> lc;
+	lc.ajouterElement(make_shared<Concepteur>(concepteurParDefaut));
+	jeu.setConcepteurs(lc);
+	cout << jeu;
 	
 	copieJeu.setTitre("Juste le meilleur jeu de tous les temps!");
 	copieJeu.setAnneeSortie(2022);

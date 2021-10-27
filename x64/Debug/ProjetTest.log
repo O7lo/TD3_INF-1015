@@ -1,6 +1,11 @@
 ﻿  main.cpp
+<<<<<<< HEAD
 C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\main.cpp(136,19): error C2760: erreur de syntaxe : jeton inattendu 'chaîne', attendu ','
 C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\main.cpp(136,39): error C2059: erreur de syntaxe : ']'
 C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\main.cpp(136,64): error C2143: erreur de syntaxe : absence de ';' avant '{'
 C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\main.cpp(137,10): error C2065: 'concepteur' : identificateur non déclaré
 C:\Users\panoy\OneDrive\Desktop\université\INF1015\tp3_git\main.cpp(139,71): error C3536: 'critere' : ne peut pas être utilisé avant d'avoir été initialisé
+=======
+     Création de la bibliothèque C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\x64\Debug\TD3.lib et de l'objet C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\x64\Debug\TD3.exp
+  ProjetTest.vcxproj -> C:\Users\pascal\Desktop\ecole\INF1015\newtd3\TD3_INF-1015\x64\Debug\TD3.exe
+>>>>>>> d9ba580a9ec1170c6a3bd776c314ad0ea615fc07
