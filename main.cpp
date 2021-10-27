@@ -101,8 +101,9 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 
 	listeEcrire.close();
 	//test operateur =
-	if (lj[2] == lj[3]) {
-		cout << lj[2] << "est egale" << endl;
+	
+	if (lj[2] == lj[2]) {
+		cout << copieConcepteur << "est egale" << endl;
 	}
 	else {
 		cout << "ne sont pas egale" << endl;
@@ -112,21 +113,20 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 	cout << lj.getCapacite() << endl;
 
 
-	shared_ptr<Concepteur> concepteurPersonnalise = make_shared<Concepteur>();
-	concepteurPersonnalise->setNom("Jean-Guy Thibodeau");
-	concepteurPersonnalise->setAnneeNaissance(40);
-	concepteurPersonnalise->setPays("on s'en %!$& comme dans l'an de sa naissance.");
-	cout << concepteurPersonnalise;
 	
+	copieConcepteur.setNom("Jean-Guy Thibodeau");
+	copieConcepteur.setAnneeNaissance(40);
+	copieConcepteur.setPays("on s'en %!$& comme dans l'an de sa naissance.");
+	cout << copieConcepteur << endl;
 	Liste<Concepteur> concepteurs;
-	concepteurs.ajouterElement(concepteurPersonnalise);
+	concepteurs.ajouterElement(lj[1]->getConcepteurs()[2]);
 
-	Jeu jeuperso;
-	jeuperso.setTitre("Juste le meilleur jeu de tous les temps!");
-	jeuperso.setAnneeSortie(2022);
-	jeuperso.setDeveloppeur("arthur le mythique et Pascal le légendaire");
-	jeuperso.setConcepteurs(concepteurs);
-	cout << jeuperso;
+	
+	copieJeu.setTitre("Juste le meilleur jeu de tous les temps!");
+	copieJeu.setAnneeSortie(2022);
+	copieJeu.setDeveloppeur("arthur le mythique et Pascal le légendaire");
+	copieJeu.setConcepteurs(concepteurs);
+	cout << copieJeu << endl;
 	//TODO: S'assurer qu'aucune ligne de code est non couverte.
 	//NOTE: Il n'est pas nécessaire de couvrir les getters/setters simples fournis; il faut tester si vous en ajoutez ou les modifiez.
 	//NOTE: Pour Liste, qui est générique, on demande de couvrir uniquement pour Liste<Jeu>, pas pour tous les types.
