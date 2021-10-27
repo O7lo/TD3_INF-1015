@@ -119,7 +119,8 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 	copieConcepteur.setPays("on s'en %!$& comme dans l'an de sa naissance.");
 	cout << copieConcepteur << endl;
 	Liste<Concepteur> concepteurs;
-	concepteurs.ajouterElement(lj[1]->getConcepteurs()[2]);
+	concepteurs.ajouterElement(make_shared<Concepteur>(copieConcepteur));
+
 
 	
 	copieJeu.setTitre("Juste le meilleur jeu de tous les temps!");
@@ -127,6 +128,8 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 	copieJeu.setDeveloppeur("arthur le mythique et Pascal le légendaire");
 	copieJeu.setConcepteurs(concepteurs);
 	cout << copieJeu << endl;
+	lj.ajouterElement(make_shared<Jeu>(copieJeu));
+
 	//TODO: S'assurer qu'aucune ligne de code est non couverte.
 	//NOTE: Il n'est pas nécessaire de couvrir les getters/setters simples fournis; il faut tester si vous en ajoutez ou les modifiez.
 	//NOTE: Pour Liste, qui est générique, on demande de couvrir uniquement pour Liste<Jeu>, pas pour tous les types.
