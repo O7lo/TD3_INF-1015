@@ -49,7 +49,6 @@ ostream& operator<< (ostream& o, const Jeu& jeu) {
 
 ostream& operator<< (ostream& o, const Liste<Jeu>& listeJeux)
 {
-	//string ligne = "\n\033[35m- - - - - - - - - - - - - - - - - - - - \033[0m\n";
 	for (auto i : iter::range(listeJeux.size())) {
 		o << ligne << endl;
 		o << setw(36) << left << listeJeux[i]->getTitre();
@@ -78,7 +77,7 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 		"\033[0m\n";
 
 	
-	//TODO: Les l'affichage et l'écriture dans le fichier devraient fonctionner.
+	//Les l'affichage et l'écriture dans le fichier devraient fonctionner.
 	
 	cout << lj << endl;
 
@@ -92,7 +91,7 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 
 	cout << copieConcepteur << endl;
 
-	//TODO: Compléter le main avec les tests demandés.	
+	//Compléter le main avec les tests demandés.	
 	//test de ajout de jeu dans un fichiers
 	ofstream listeEcrire;
 	listeEcrire.open("jeux.txt");
@@ -103,10 +102,10 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 	//test operateur =
 	
 	if (lj[2] == lj[2]) {
-		cout << copieConcepteur << "est egale" << endl;
+		cout << copieConcepteur << "est egal" << endl;
 	}
 	else {
-		cout << "ne sont pas egale" << endl;
+		cout << "ne sont pas egal" << endl;
 	}
 	//test get capacite
 
@@ -131,7 +130,6 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 	jeu.setTitre("monsieur patate");
 	jeu.setDeveloppeur("raymarine");
 	jeu.setAnneeSortie(2012);
-	//shared_ptr<Concepteur> ptrConcepteur = make_shared<Concepteur>(concepteurParDefaut);
 	Liste<Concepteur> lc;
 	lc.ajouterElement(make_shared<Concepteur>(concepteurParDefaut));
 	jeu.setConcepteurs(lc);
@@ -156,7 +154,7 @@ int main([[maybe_unused]] int argc, [[maybe_unused]] char** argv)
 	}
 
 
-	//TODO: S'assurer qu'aucune ligne de code est non couverte.
+	// S'assurer qu'aucune ligne de code est non couverte.
 	//NOTE: Il n'est pas nécessaire de couvrir les getters/setters simples fournis; il faut tester si vous en ajoutez ou les modifiez.
 	//NOTE: Pour Liste, qui est générique, on demande de couvrir uniquement pour Liste<Jeu>, pas pour tous les types.
 
